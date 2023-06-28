@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,500;1,500&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 18px;
+}
+
+body {
+ background-image: url(../img/fundo.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: 'EB Garamond', serif;
+  font-size: 100px;
+}
+
+.body-dark{
+  background-image: url(../img/fundo2.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+}
+
+.container_cabecalho {
+  height: 100px;
+}
+
+.logo {
+  height: 100px;
+}
+
+.cabecalho {
+  position: relative;
+  margin: 1rem;
+}
+
+.botao_cabecalho{
+  display: flex;
+  justify-content: right;
+}
+
+.botão-branco{
+  color: red;
+}
+
+.container_cabecalho{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.nav-link-white{
+  color: white;
+}
+
+#sobre {
+  display: flex;
+  flex-direction: column;
+}
+
+.sobre_titulo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 10px;
+}
+
+.card {
+  border: 2px solid rgb(30, 151, 125);
+  border-radius: 10px;
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  width: 30%;
+  padding: 0.8rem;
+
+  box-shadow: -1px 5px 13px 0px rgba(0, 0, 0, 0.75);
+}
+
+.card-dark{
+  background-color: black;
+  color: white;
+  border: 2px solid rgb(226, 65, 65);
+  border-radius: 10px;
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  width: 30%;
+  padding: 0.8rem;
+
+  box-shadow: -1px 5px 13px 0px rgba(0, 0, 0, 0.75);
+}
+
+.card-img {
+  width: 100%;
+  height: 200px;
+  border-radius: 8px;
+}
+
+.card-titulo {
+  text-align: center;
+  color: rgb(30, 151, 125);
+}
+
+.card-titulo-dark {
+  text-align: center;
+  color: rgb(226, 65, 65);
+}
+
+.card-descricao {
+  text-align: justify;
+  font-size: 0.8rem;
+  flex-grow: 1;
+}
+
+.card-botao {
+  border-radius: 8px;
+  background-color: rgb(30, 151, 125);
+  border: 2px solid rgb(30, 151, 125);
+  
+}
+
+.card-botao:hover{
+  background-color: transparent;
+  background-color: rgb(19, 225, 181);
+  border: 2px solid rgb(19, 225, 181);
+  color: black;
+}
+
+.footer_img{
+  width: 5%;
+}
+
+.footerimagens{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+@media (max-width: 600px) {
+
+  * {
+    font-size: 22px;
+  }
+
+  .card {
+    width: 80%;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 801px) {
+
+  * {
+    font-size: 20px;
+  }
+
+  .card {
+    width: 40%;
+  }
+
+}
