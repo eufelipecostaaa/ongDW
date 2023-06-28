@@ -1,6 +1,6 @@
 let formulario = document.querySelector("form");
 
-const checkInputs = (nome, telefone, email) => {
+const checkInputs = (nome, telefone, email, renda, residencia, opResidencia, intencao) => {
     let control = true;
     if (nome.value.trim() == "") {
 
@@ -18,6 +18,24 @@ const checkInputs = (nome, telefone, email) => {
         control = false;
     }
 
+    if (renda == null) {
+        let divRenda = document.querySelector(".form-item-radio").parentElement;
+        console.log(divRenda);
+        divRenda.classList.add("erro");
+        control = false;
+    }
+
+    console.log(opResidencia);
+    if (opResidencia.value == "") {
+        residencia.classList.add("erro");
+        control = false;
+    }
+    if (intencao.value.trim() == "") {
+
+        intencao.classList.add("erro");
+        control = false;
+    }
+
     return control;
 }
 
@@ -31,10 +49,7 @@ formulario.addEventListener("submit", (event) => {
     let opResidencia = residencia.options[residencia.selectedIndex];
     let intencao = document.querySelector("#intencao");
 
-
-    checkInputs(nome, telefone, email);
-
-    if (!checkInputs(nome, telefone, email)) {
+    if (!checkInputs(nome, telefone, email, renda, residencia, opResidencia, intencao)) {
         event.preventDefault();
     } else {
         const adotante = {
