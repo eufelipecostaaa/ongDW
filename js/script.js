@@ -51,6 +51,8 @@ const criacaoPosts = () => {
 window.onload = () => {
   criacaoPosts();
 
+  let cards = document.querySelectorAll(".card");
+
   card.forEach((card) => {
     card.addEventListener("mousemove", () => {
       card.style.backgroundColor = "yellow";
@@ -61,6 +63,11 @@ window.onload = () => {
     });
 
     card.lastElementChild.addEventListener("click", (event) => {
+      event.preventDefault();
+      sessionStorage.setItem(
+        "idAnimal",
+        card.last
+      )
       console.log("acessou");
     });
 

@@ -11,3 +11,15 @@
     background-color: rgba(255, 0, 0, 0.199);
     border-radius: 5px;
 }
+
+.campo-obrigatorio{
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    gap: 5px;
+    color: red;
+}
+
+.campo-obrigatorio img{
+    width: 30px;
+}
